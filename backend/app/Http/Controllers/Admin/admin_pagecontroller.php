@@ -16,6 +16,8 @@ use App\Http\Controllers\Controller;
 
 class admin_pagecontroller extends Controller
 {
+
+
     //
     public function dashboard()
     {
@@ -27,6 +29,8 @@ class admin_pagecontroller extends Controller
         $pendingwithdrawal = Userwithdraw::where('status', 'pending')->get();
         return view('Adminview.admin_dashboard', compact('userCount', 'totalDeposit', 'totalwithdrawal', 'pendingDeposit', 'pendingwithdrawal'));
     }
+
+
 
     public function manage_user()
     {
